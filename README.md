@@ -1,7 +1,7 @@
 dump1090mqtt
 ============
 
-Publish dump1090 output to MQTT
+Publish [dump1090](http://www.satsignal.eu/raspberry-pi/dump1090.html) output to MQTT
 
 The `topic` is `/adsb/RADAR/ICAOADDR` where 
 
