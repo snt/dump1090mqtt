@@ -1,0 +1,5 @@
+A docker container can be built using:
+
+docker build -t snt/dump1090mqtt:1.0 .
+docker tag snt/dump1090mqtt:1.0 MY-PRIVATE-REGISTRY:5000/snt/dump1090mqtt:1.0
+docker push MY-PRIVATE-REGISTRY:5000/snt/dump1090mqtt:1.0
