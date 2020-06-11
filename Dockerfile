@@ -1,14 +1,11 @@
-FROM alpine:latest
+FROM python:3.8.3-alpine3.12
 
-RUN apk update
-RUN apk add python3 py3-pip
-RUN pip install paho-mqtt
-RUN ln -s /usr/bin/python3 /usr/bin/python
+WORKDIR /app
+COPY startDump1090pub.sh .
+COPY dump1090pub.py .
+COPY sub.py .
+COPY requirements.txt .
 
-COPY sh.startDump1090pub /usr/bin
-COPY dump1090pub.py /usr/bin
-COPY sub.py /usr/bin
+RUN pip install -r requirements.txt
 
-ENTRYPOINT ["/usr/bin/sh.startDump1090pub"]
-
-CMD /usr/bin/sh.startDump1090pub
+CMD ["/app/startDump1090pub.sh"]
