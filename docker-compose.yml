@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  dump1090mqtt:
+    image: MY-PRIVATE-REGISTRY:5000/snt/dump1090mqtt:1.0
+    container_name: dump1090mqtt
+    restart: always
+    environment:
+      - MQTT_HOST=mqtt-broker.host.tld
+      - MQTT_PORT=1883
+      - MQTT_USER=mqtt-username
+      - MQTT_PASS=mqtt-password
+      - DUMP1090_HOST=dump1090.host.tld
+      - DUMP1090_PORT=30003
+      - RADARNAME=my-radar-name
