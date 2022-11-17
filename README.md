@@ -47,4 +47,4 @@ output
 
 |Topic| Payload |
 |:--- |:--- |
-|`/adsb/RADAR/ICAOADDR` | Same as port 30003 of [dump1090](https://github.com/antirez/dump1090), CSV in [the format of SBS BaseStation](http://www.homepages.mcb.net/bones/SBS/Article/Barebones42_Socket_Data.htm).
+|`/adsb/RADAR/ICAOADDR` | Same as port 30003 of [dump1090](https://github.com/antirez/dump1090), CSV in [the format of SBS BaseStation](http://woodair.net/sbs/article/barebones42_socket_data.htm).
